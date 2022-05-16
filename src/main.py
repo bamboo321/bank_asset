@@ -1,11 +1,11 @@
 import time
-import bank.jpbank
-import bank.mufj
+from bank import jpbank
+from bank import mufj
 
 
 if __name__ == '__main__':
     try:
-        jpbank = bank.jpbank.JPBANK()
+        jpbank = jpbank.JPBANK()
         jpbank.login()
         balance = jpbank.get_balance()
         print('jpbank balance = ', jpbank.balance)
@@ -14,7 +14,7 @@ if __name__ == '__main__':
         jpbank.driver.quit()
 
     try:
-        mufj = bank.mufj.MUFJ()
+        mufj = mufj.MUFJ()
         mufj.login()
         # time.sleep(3)
         balance = mufj.get_balance()
