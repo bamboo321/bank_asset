@@ -42,7 +42,7 @@ class JPBANK(inquiry.Account):
         self.driver.find_element(By.NAME, 'U010302').click()
 
         # ダイレクトトップボタン
-        self.driver.find_element(By.XPATH, '//*[@id="strMain"]/p[6]/a').click()
+        self.driver.find_element(By.CSS_SELECTOR, '#strMain > p.btnBa.alignR.submit > a').click()
         
         
     def get_balance(self):
