@@ -6,10 +6,10 @@ class Account:
         self.balance = 0
 
         s = configparser.ConfigParser()
-        s.read('../secret/config.ini')
+        s.read('bank_asset/secret/config.ini')
 
         c = configparser.ConfigParser()
-        c.read('../ini/config.ini')
+        c.read('bank_asset/ini/config.ini')
 
         self.secret = s[inikey]
         self.config = c
